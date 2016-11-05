@@ -1,0 +1,13 @@
+section.cover{
+	background-image: url(../img/circles_background_grid_black_white_dark_30551_3840x2400.jpg);
+	background-repeat:no-repeat;
+    background-size: cover;
+    background-color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+}
+

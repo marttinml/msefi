@@ -1,0 +1,84 @@
+<main>
+
+	<header>
+		<section class="logo">
+			<span class="name">Myidenti</span>
+			<i class="icon"></i>
+		</section>
+		<section class="content">
+			<span class="user">{{name}}</span>
+			<i class="logout" ng-click="logout()">
+				<i class="fa fa-power-off fa-2x"></i>
+			</i>
+		</section>
+	</header>
+
+	<div class="content">
+		<section class="form">
+			<ul>
+				<li><span>Catidad</span><input type="text" ng-model="data.dataLength"></li>
+				
+				<li ng-repeat="street in data.streets track by $index">
+					<span>Calle</span><input type="text" ng-model="street">
+					<i ng-click="addStreet()">+</i>
+				</li>
+				
+				<li class="content">
+					<span ng-click="toggleContent()">Dirección base</span>
+					<i class="fa fa-chevron-up" ng-class="{'fa-chevron-down':isToggleContent()}"></i>
+					<hr>
+					<ul ng-class="{'animate-hide':isToggleContent()}">
+						
+						<li><span>Colonia / Localidad</span><input type="text" ng-model="data.baseAddress.local"></li>
+						<!-- <li><span>Localidad</span><input type="text" ng-model="data.baseAddress.localN"></li> -->
+						<li><span>Delegación / Municipio</span><input type="text" ng-model="data.baseAddress.del"></li>
+						<!-- <li><span>Municipio</span><input type="text" ng-model="data.baseAddress.delN"></li> -->
+						<li><span>Codigo postal</span><input type="text" ng-model="data.baseAddress.cp"></li>
+						<li><span>Sección</span><input type="text" ng-model="data.baseAddress.section" maxlength="6"></li>
+						<li><span>Estado</span>
+							<select name="repeatSelect" ng-model="data.baseAddress.state" >
+					        	<option ng-repeat="option in statesList" value="{{option}}">{{option.name}}</option>
+					    	</select>
+					    </li>
+					    <li><span>Localidad</span>
+							<select name="repeatSelect" ng-model="data.baseAddress.localN" >
+					        	<option ng-repeat="option in localList" value="{{option}}">{{option.name}}</option>
+					    	</select>
+					    </li>
+					</ul>
+				</li>
+				<li class="content"></li>
+				<li>
+					<button class="cancel" ng-click="clear()">Limpiar</button>
+					<button class="agree" ng-click="create()">Generar</button>
+				</li>
+			</ul>
+		</section>
+		<section class="result" ng-repeat="resultt in results">
+			<div class="content">
+				<div class="lines"></div>
+				<span class="lastName1">{{resultt.lastName1}}</span>
+				<span class="lastName2">{{resultt.lastName2}}</span>
+				<span class="name">{{resultt.name}}</span>
+				<span class="address1">{{resultt.address1}}</span>
+				<span class="address2">{{resultt.address2}}</span>
+				<span class="address3">{{resultt.address3}}</span>
+				<span class="folio">{{resultt.folio}}</span>
+				<span class="registerYear">{{resultt.registerYear}}</span>
+				<span class="folioIFE">{{resultt.folioIFE}}</span>
+				<span class="no">{{resultt.no}}</span>
+				<span class="localN">{{resultt.localN}}</span>
+				<span class="delN">{{resultt.delN}}</span>
+				<span class="section">{{resultt.section}}</span>
+				<span class="old">{{resultt.old}}</span>
+				<span class="sex">{{resultt.sex}}</span>
+				<span class="sign" ng-style="{'background-image':'url('+resultt.pictureSign+')'}"></span>
+				<span class="picture" ng-style="{'background-image':resultt.picture}"></span>
+				<div class="picture-lines"></div>
+				<span class="id" >{{resultt.ID}}</span>
+			</div>
+			
+		</section>
+	</div>
+	<ng-spin ng-model="spin"></ng-spin>
+</main>
