@@ -18,13 +18,9 @@
 			<ul>
 				
 				<li>
-				<span>Cantidad</span>
+					<span>Cantidad</span>
 					<select name="repeatSelect" ng-model="data.dataLength" >
-						<option selected value="1">1</option>
-						<option value="1">5</option>
-						<option value="1">10</option>
-						<option value="1">20</option>
-						<option value="1">50</option>
+						<option ng-repeat="option in lengthList" value="{{option.id}}">{{option.name}}</option>
 					</select>
 				</li>
 				

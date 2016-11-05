@@ -61,6 +61,14 @@
             {id: 'M', name: 'Mujer'}
         ];
         $scope.spin = $rootScope.spin;
+        $scope.lengthList = [
+                {id:1, name:"1"},
+                {id:5, name:"5"},
+                {id:10, name:"10"},
+                {id:20, name:"20"},
+                {id:50, name:"50"},
+                {id:100, name:"100"}
+            ];
         $scope.statesList = [
             {no:'09',id:'DF', name:'Distrito Federal', local:[
                 {id:"010", name:"Alvaro ObregÛn"},
