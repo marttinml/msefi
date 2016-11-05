@@ -144,7 +144,9 @@
                 
             }
         };
-
+        $scope.addStreet = function(){
+            $scope.data.streets.push('');
+        };
         $scope.create = function(){
             
             var home = new Home();
@@ -172,7 +174,7 @@
 
         $scope.clear = function(){
             $scope.clearResult();
-            $scope.data.dataLength  = 0;
+            $scope.data.dataLength  =1;
             $scope.data.streets     = [''];
         };
         $scope.clearResult = function(){
@@ -199,7 +201,7 @@
         $scope.clearAll = function(){
             $scope.clear();
             $scope.clearResult();
-            $scope.data.baseAddress.state       =  {no:"",id:"",name:""};
+            $scope.data.baseAddress.state       =  '{no:"",id:"",name:""}';
 ;
             $scope.data.baseAddress.local       = '';
             $scope.data.baseAddress.del         = '';
@@ -210,6 +212,7 @@
 
         };
 
+        $scope.clearAll();
         $scope.$watch('data.baseAddress.state', function(){
             console.log($scope.data.baseAddress.state);
             var temp = JSON.parse($scope.data.baseAddress.state);
@@ -217,7 +220,6 @@
             console.log(temp);
         });
 
-        $scope.clearAll();
     };
     controller.$inject = ['$scope','$rootScope','$routeParams','Home'];
     angular.module('home').controller('HomeController', controller);

@@ -16,10 +16,20 @@
 	<div class="content">
 		<section class="form">
 			<ul>
-				<li><span>Catidad</span><input type="text" ng-model="data.dataLength"></li>
+				
+				<li>
+				<span>Cantidad</span>
+					<select name="repeatSelect" ng-model="data.dataLength" >
+						<option selected value="1">1</option>
+						<option value="1">5</option>
+						<option value="1">10</option>
+						<option value="1">20</option>
+						<option value="1">50</option>
+					</select>
+				</li>
 				
 				<li ng-repeat="street in data.streets track by $index">
-					<span>Calle</span><input type="text" ng-model="street">
+					<span>Calle</span><input type="text" ng-model="data.streets[$index]">
 					<i ng-click="addStreet()">+</i>
 				</li>
 				
@@ -73,7 +83,7 @@
 				<span class="old">{{resultt.old}}</span>
 				<span class="sex">{{resultt.sex}}</span>
 				<span class="sign" ng-style="{'background-image':'url('+resultt.pictureSign+')'}"></span>
-				<span class="picture" ng-style="{'background-image':resultt.picture}"></span>
+				<span class="picture" ng-style="{'background-image':'url('+resultt.picture+')'}"></span>
 				<div class="picture-lines"></div>
 				<span class="id" >{{resultt.ID}}</span>
 			</div>
