@@ -244,13 +244,9 @@ section.form ul > li i{
 section.result{
 	position: relative;
 	top:0;
-	left: 20%;
 	bottom: 0;
 	right: 0;
-	padding-top: 100px;
-	width: auto;
-	background-color: rgb(255, 255, 255);
-
+	width: 100%;
 }	
 
 section.result > .content{
@@ -424,5 +420,11 @@ section.form  ul > li.content > ul.animate-hide{
 	transition:.3s;
 }
 
-
+.container{
+	margin-left: 20%;
+	height: calc(100vh - 80px);
+	margin-top: 80px;
+	position: relative;
+	overflow: auto;
+}
 

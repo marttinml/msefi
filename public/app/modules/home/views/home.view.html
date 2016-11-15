@@ -60,31 +60,33 @@
 				</li>
 			</ul>
 		</section>
-		<section class="result" ng-repeat="resultt in results">
-			<div class="content">
-				<div class="lines"></div>
-				<span class="lastName1">{{resultt.lastName1}}</span>
-				<span class="lastName2">{{resultt.lastName2}}</span>
-				<span class="name">{{resultt.name}}</span>
-				<span class="address1">{{resultt.address1}}</span>
-				<span class="address2">{{resultt.address2}}</span>
-				<span class="address3">{{resultt.address3}}</span>
-				<span class="folio">{{resultt.folio}}</span>
-				<span class="registerYear">{{resultt.registerYear}}</span>
-				<span class="folioIFE">{{resultt.folioIFE}}</span>
-				<span class="no">{{resultt.no}}</span>
-				<span class="localN">{{resultt.localN}}</span>
-				<span class="delN">{{resultt.delN}}</span>
-				<span class="section">{{resultt.section}}</span>
-				<span class="old">{{resultt.old}}</span>
-				<span class="sex">{{resultt.sex}}</span>
-				<span class="sign" ng-style="{'background-image':'url('+resultt.pictureSign+')'}"></span>
-				<span class="picture" ng-style="{'background-image':'url('+resultt.picture+')'}"></span>
-				<div class="picture-lines"></div>
-				<span class="id" >{{resultt.ID}}</span>
-			</div>
-			
-		</section>
+		<div class="container">
+			<section class="result" ng-repeat="resultt in results">
+				<div class="content">
+					<div class="lines"></div>
+					<span class="lastName1">{{resultt.lastName1}}</span>
+					<span class="lastName2">{{resultt.lastName2}}</span>
+					<span class="name">{{resultt.name}}</span>
+					<span class="address1">{{resultt.address1}}</span>
+					<span class="address2">{{resultt.address2}}</span>
+					<span class="address3">{{resultt.address3}}</span>
+					<span class="folio">{{resultt.folio}}</span>
+					<span class="registerYear">{{resultt.registerYear}}</span>
+					<span class="folioIFE">{{resultt.folioIFE}}</span>
+					<span class="no">{{resultt.no}}</span>
+					<span class="localN">{{resultt.localN}}</span>
+					<span class="delN">{{resultt.delN}}</span>
+					<span class="section">{{resultt.section}}</span>
+					<span class="old">{{resultt.old}}</span>
+					<span class="sex">{{resultt.sex}}</span>
+					<span class="sign" ng-style="{'background-image':'url('+resultt.pictureSign+')'}"></span>
+					<span class="picture" ng-style="{'background-image':'url('+resultt.picture+')'}"></span>
+					<div class="picture-lines"></div>
+					<span class="id" >{{resultt.ID}}</span>
+				</div>
+				
+			</section>
+		</div>
 	</div>
 	<ng-spin ng-model="spin"></ng-spin>
 </main>
